@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Secular+One&family=Shanti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Secular+One&family=Shanti&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Shanti", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tela {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.calculadora-board {
+    width: 75%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculadora-titulo {
+    font-size: 52px;
+    letter-spacing: 20px;
+    padding-bottom: 50px;
+    font-family: "Secular One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.calculadora-conteudo {
+    width: 55%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #848C8E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calculadora-superior {
+    width: 85%;
+    height: 12%;
+    margin: auto;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+}
+
+.calculadora-inferior {
+    width: 100%;
+    height: 80%;
+    padding: 35px 40px;
+    border-radius: 0 0 15px 15px;
+    border-top: #435058 4px solid;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.teclado-esquerdo {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.teclado-linha {
+    height: 17.5%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tecla {
+    height: 100%;
+    width: 25%;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.zero {
+    width: 60%;
+}
+
+.teclado-direito {
+    width: 34%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.teclado-coluna {
+    width: 42%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tecla-coluna {
+    height: 18%;
+    width: 90%;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.ce {
+    background-color: #4A8CFA;
+}
+
+.c {
+    background-color: #FA4A4A;
+}
+
+.mais {
+    height: 45%;
+}
+
+/* PARTE DO HISTÓRICO */
+
+.historico-board {
+    width: 35%;
+    height: 100%;
+    padding: 30px 40px;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.historico-titulo {
+    height: 15%;
+    font-size: 40px;
+    letter-spacing: 10px;
+    color: #435058;
+}
+
+.historico-conteudo {
+    width: 100%;
+    height: 100%;
+    margin-right: -20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    overflow-y: scroll;
+}
+
+
+
+.historico-conteudo {
+    --sb-thumb-color: #ffffff;
+    --sb-size: 30px;
+}
+
+.historico-conteudo::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+.historico-conteudo::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 16px;
+}
+
+.historico-conteudo::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 16px;
+    border: 10px solid #d9d9d9;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    .historico-conteudo {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+
+
+
+.card {
+    width: 100%;
+    height: 15%;
+    padding: 18px 25px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    display: flex;
+    color: #707070;
+}
+
+.horario {
+    height: 100%;
+    width: 50%;
+    font-size: 12px;
+    display: flex;
+    align-items: end;
+}
+
+.historico-calculo {
+    height: 100%;
+    width: 50%;
+    font-size: 18px;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    line-height: 25px;
+    letter-spacing: 5px;
+    align-items: center;
+}
