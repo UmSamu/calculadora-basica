@@ -15,40 +15,66 @@
                 <span>CALCULADORA</span>
             </div>
             <div class="calculadora-conteudo">
-                <div class="calculadora-superior"></div>
+                <div class="calculadora-superior">
+                    <input id="input-calculadora">
+                </div>
                 <div class="calculadora-inferior">
                     <div class="teclado-esquerdo">
                         <div class="teclado-linha">
-                            <div class="tecla"><span>7</span></div>
-                            <div class="tecla"><span>8</span></div>
-                            <div class="tecla"><span>9</span></div>
+                            <div class="tecla tecla-linha"><span onclick="inserirNumero(7)">7</span></div>
+                            <div class="tecla tecla-linha"><span onclick="inserirNumero(8)">8</span></div>
+                            <div class="tecla tecla-linha"><span onclick="inserirNumero(9)">9</span></div>
                         </div>
                         <div class="teclado-linha">
-                            <div class="tecla"><span>4</span></div>
-                            <div class="tecla"><span>5</span></div>
-                            <div class="tecla"><span>6</span></div>
+                            <div class="tecla tecla-linha"><span onclick="inserirNumero(4)">4</span></div>
+                            <div class="tecla tecla-linha"><span onclick="inserirNumero(5)">5</span></div>
+                            <div class="tecla tecla-linha"><span onclick="inserirNumero(6)">6</span></div>
                         </div>
                         <div class="teclado-linha">
-                            <div class="tecla"><span>1</span></div>
-                            <div class="tecla"><span>2</span></div>
-                            <div class="tecla"><span>3</span></div>
+                            <div class="tecla tecla-linha"><span onclick="inserirNumero(1)">1</span></div>
+                            <div class="tecla tecla-linha"><span onclick="inserirNumero(2)">2</span></div>
+                            <div class="tecla tecla-linha"><span onclick="inserirNumero(3)">3</span></div>
                         </div>
                         <div class="teclado-linha">
-                            <div class="tecla zero"><span>0</span></div>
-                            <div class="tecla"><span>.</span></div>
+                            <div class="tecla tecla-linha zero"><span onclick="inserirNumero(0)">0</span></div>
+                            <div class="tecla tecla-linha"><span onclick="inserirNumero('.')">.</span></div>
                         </div>
                     </div>
+
+                    <!-- <div class="teclado-esquerdo">
+                        <div class="teclado-linha">
+                            <div class="tecla tecla-linha"><button id="botao-numero-7" onclick="inserirNumero()">7</button></div>
+                            <div class="tecla tecla-linha"><button id="botao-numero-8" onclick="inserirNumero()">8</button></div></div>
+                            <div class="tecla tecla-linha"><button id="botao-numero-9" onclick="inserirNumero()">9</button></div></div>
+                        </div>
+                        <div class="teclado-linha">
+                            <div class="tecla tecla-linha"><button id="botao-numero-4" onclick="inserirNumero()">4</button></div></div>
+                            <div class="tecla tecla-linha"><button id="botao-numero-5" onclick="inserirNumero()">5</button></div></div>
+                            <div class="tecla tecla-linha"><button id="botao-numero-6" onclick="inserirNumero()">6</button></div></div>
+                        </div>
+                        <div class="teclado-linha">
+                            <div class="tecla tecla-linha"><button id="botao-numero-1" onclick="inserirNumero()">1</button></div></div>
+                            <div class="tecla tecla-linha"><button id="botao-numero-2" onclick="inserirNumero()">2</button></div></div>
+                            <div class="tecla tecla-linha"><button id="botao-numero-3" onclick="inserirNumero()">3</button></div></div>
+                        </div>
+                        <div class="teclado-linha">
+                            <div class="tecla tecla-linha zero"><button id="botao-numero-0" onclick="inserirNumero()">0</button></div></div>
+                            <div class="tecla tecla-linha"><button id="botao-numero-." onclick="inserirNumero()">.</button></div>iv>
+                        </div>
+                    </div> -->
+
+
                     <div class="teclado-direito">
                         <div class="teclado-coluna">
-                            <div class="tecla-coluna ce"><span>CE</span></div>
-                            <div class="tecla-coluna"><span>*</span></div>
-                            <div class="tecla-coluna mais"><span>+</span></div>
+                            <div class="tecla tecla-coluna ce"><span onclick="limparTudo()">CE</span></div>
+                            <div class="tecla tecla-coluna"><span onclick="inserirNumero('*')">*</span></div>
+                            <div class="tecla tecla-coluna mais"><span onclick="inserirNumero('+')">+</span></div>
                         </div>
                         <div class="teclado-coluna">
-                            <div class="tecla-coluna c"><span>C</span></div>
-                            <div class="tecla-coluna"><span>/</span></div>
-                            <div class="tecla-coluna"><span>-</span></div>
-                            <div class="tecla-coluna"><span>=</span></div>
+                            <div class="tecla tecla-coluna c"><span onclick="limparContaAtual()">C</span></div>
+                            <div class="tecla tecla-coluna"><span onclick="inserirNumero('/')">/</span></div>
+                            <div class="tecla tecla-coluna"><span onclick="inserirNumero('-')">-</span></div>
+                            <div class="tecla tecla-coluna"><span onclick="inserirNumero('=')">=</span></div>
                         </div>
                     </div>
                 </div>
@@ -90,3 +116,25 @@
 </body>
 
 </html>
+
+<script>
+    function inserirNumero(numero) {
+        var input = document.getElementById("input-calculadora").value
+
+        if (input == null ) {
+            document.getElementById("input-calculadora").value = numero
+        } else if (numero == '.') {
+            document.getElementById("input-calculadora").value += numero
+        } else {
+            document.getElementById("input-calculadora").value += " " + numero
+        } 
+    }
+
+    function limparTudo() {
+        document.getElementById("input-calculadora").value = ''
+    }
+
+    function limparContaAtual() {
+        document.getElementById("input-calculadora").value = ''
+    }
+</script>

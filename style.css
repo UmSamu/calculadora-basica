@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Secular+One&family=Shanti&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Secular+One&family=Shanti&display=swap');
 
+/* ORGANIZADO TELA GERAL */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Shanti", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .tela {
@@ -26,14 +27,12 @@
 }
 
 .calculadora-titulo {
-    font-size: 52px;
+    font-size: 40px;
     letter-spacing: 20px;
-    padding-bottom: 50px;
-    font-family: "Secular One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    padding-bottom: 30px;
 }
 
+/* PARTE DA CACULADORA */
 .calculadora-conteudo {
     width: 55%;
     height: 100%;
@@ -47,10 +46,21 @@
 
 .calculadora-superior {
     width: 85%;
-    height: 12%;
+    height: 13%;
     margin: auto;
     background-color: #FFFFFF;
     border-radius: 15px;
+}
+
+#input-calculadora {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    text-decoration: none;
+    border: none;
+    text-align: end;
+    font-size: 59px;
+    padding: 15px;
 }
 
 .calculadora-inferior {
@@ -83,14 +93,26 @@
 }
 
 .tecla {
-    height: 100%;
-    width: 25%;
     background-color: #FFFFFF;
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    cursor: pointer;
+}
+
+.tecla span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tecla-linha {
+    height: 100%;
+    width: 25%;
 }
 
 .zero {
@@ -116,12 +138,6 @@
 .tecla-coluna {
     height: 18%;
     width: 90%;
-    background-color: #FFFFFF;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
 }
 
 .ce {
@@ -150,7 +166,7 @@
 
 .historico-titulo {
     height: 15%;
-    font-size: 40px;
+    font-size: 32px;
     letter-spacing: 10px;
     color: #435058;
 }
@@ -192,9 +208,6 @@
         scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
     }
 }
-
-
-
 
 .card {
     width: 100%;
